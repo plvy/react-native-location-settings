@@ -1,5 +1,6 @@
 'use strict';
-import React, { LinkingIOS } from 'react-native';
+import React from 'react';
+import { LinkingIOS } from 'react-native';
 
 var LocationSettings = {
   open: () => {
