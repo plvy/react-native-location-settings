@@ -25,8 +25,11 @@ public final class RNLocationSettings extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void openLocation() {
-    Intent viewIntent = new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+    Intent viewIntent = new Intent(android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
     viewIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+    Uri uri = Uri.fromParts("package", "com.plvy.sports", null);
+    viewIntent.setData(uri);
+
     mContext.startActivity(viewIntent);
   }
 
